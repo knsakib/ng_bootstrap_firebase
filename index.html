@@ -7,7 +7,7 @@ in the JS file we will create -->
 <!-- ng-init is a directive that initializes application data by assigning
 variable values -->
 
-<html lang="en" ng-app='app_module'>
+<html lang="en" ng-app="app_module">
 <head>
 <meta charset="UTF-8">
 
@@ -22,8 +22,20 @@ variable values -->
 </head>
 
 <body>
-Hello!
 
+  <!-- Adds a controller that the Angular module will control.
+      The view is the div element and all that it contains. The $scope component is used to provide data to the view. -->
+  <div ng-controller="app_ctrl_1">
+
+    <!-- Define 2 elements that will be bound to the name and message values in the scope using the ng-model directive. If
+      either value changes here it will change in the scope and vice versa -->
+    Name: <input type="text" ng-model="name" /> {{name}} <br>
+    Message: <input type="text" ng-model="message" />
+
+    <!-- Bind a click on this button to the function updateValue using ng-click -->
+      <button ng-click="updateValue()">Save</button>
+
+  </div>
 
   <!-- Load the AngularJS library -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
@@ -32,6 +44,5 @@ Hello!
         <script src="app_module.js"></script>
 
 </body>
-
 
 </html>
