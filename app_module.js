@@ -30,10 +30,10 @@
 // Modules that work with HTML normally have a name that contains app.
 var app = angular.module('app_module', []);
 
-app_module.controller('app_ctrl_1', function($scope) {
+app.controller('app_ctrl_1', function($scope) {
 
-  $scope.name1 = 1;
-  $scope.message = message;
+$scope.name=$scope.name;
+$scope.message=$scope.message;
 
 
 });

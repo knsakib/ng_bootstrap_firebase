@@ -23,6 +23,18 @@ variable values -->
 
 <body>
 
+<!-- bottstrap CONTAINERS -->
+<!-- container puts padding around itself while container-fluid fills the whole screen. Bootstap grids require a container. -->
+<div class="container">
+
+  <!-- page-header adds space aroundtext and enlarges it. It also adds an underline at the end -->
+<div class="page-header">
+  <h1>Wow! website</h1>
+</div>
+
+<!-- jumbotron enlarges fonts and puts everything in a gray box with rounded corners. If jumbotron is outside a container it fills the total width. You can change the styles by placing the changes after the Bootstrap CDN link -->
+<div class="jumbotron">
+
   <!-- Adds a controller that the Angular module will control.
       The view is the div element and all that it contains. The $scope component is used to provide data to the view. -->
   <div ng-controller="app_ctrl_1">
@@ -30,12 +42,19 @@ variable values -->
     <!-- Define 2 elements that will be bound to the name and message values in the scope using the ng-model directive. If
       either value changes here it will change in the scope and vice versa -->
     Name: <input type="text" ng-model="name" /> {{name}} <br>
-    Message: <input type="text" ng-model="message" />
+    Message: <input type="text" ng-model="message" /> {{message}}
 
     <!-- Bind a click on this button to the function updateValue using ng-click -->
-      <button ng-click="updateValue()">Save</button>
+    <!-- BUTTONS bootstarp-->
+    <!-- There are many built in button colors and sizes. If a link is to trigger in page functionality it should use role="button". The button element should be used in most situations -->
+      <button ng-click="updateValue()" class="btn btn-info" role="button">Save</button>
 
   </div>
+
+</div>
+
+</div>
+
 
   <!-- Load the AngularJS library -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
