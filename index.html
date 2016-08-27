@@ -19,45 +19,432 @@ variable values -->
 <title>Wow! website</title>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
+<link rel="stylesheet" type="text/css" href="custom.css">
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
+
+  <!-- NAVIGATION ELEMENTS -->
+<div class="container">
+
+<!-- Basic horizontal menu -->
+<!-- Use nav-pills, nav-tabs. To center tabs add nav-justified to the class for ul -->
+<ul class="nav nav-pills">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+
+  <!-- Add a dropdown menu -->
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Phone</a></li>
+      <li><a href="#">Email</a></li>
+      <li><a href="#">Achedule Appointment</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Shop</a></li>
+
+  <li class="active"><a data-toggle="tab" href="#superman">Superman</a></li>
+  <li><a data-toggle="tab" href="#batman">Batman</a></li>
+
+  <!-- Dropdown menu item -->
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Flash
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+
+      <!-- Disable a tab -->
+      <li class="disabled"><a data-toggle="tab" href="#flash">The Flash</a></li>
+      <li><a data-toggle="tab" href="#kidflash">Kid Flash</a></li>
+    </ul>
+  </li>
+
+
+  <!-- Pagination -->
+
+  <nav>
+    <ul class="pagination">
+      <li>
+        <a href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li>
+        <a href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+
+<!-- Basic horizontal menu ul finished-->
+</ul>
+
+
+<!-- Collapsible Navigation Bar -->
+<div class="container">
+
+<!-- .navbar-fixed-top, or .navbar-fixed-bottom can be added to keep the nav bar fixed on the screen -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+      <!-- Button that toggles the navbar on and off on small screens -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+      <!-- Hides information from screen readers -->
+        <span class="sr-only"></span>
+
+        <!-- Draws 3 bars in navbar button when in small mode -->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- You'll have to add padding in your image on the top and right of a few pixels (CSS Styling will break the navbar) -->
+      <a class="pull-left" href="#"><img src="Wizard Skull-48x48"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">About</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Us <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Email</a></li>
+            <li><a href="#">Phone</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Set Appointment</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- navbar-left will move the search to the left -->
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+<!-- Collapsible Navigation Bar -->
+
+
+
+
+  <!-- Carousel -->
+  <!-- Surround everything with a div with the class carousel slide -->
+  <div id="theCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Define how many slides to put in the carousel -->
+    <ol class="carousel-indicators">
+      <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+      <li data-target="#theCarousel" data-slide-to="1"> </li>
+      <li data-target ="#theCarousel" data-slide-to="2"> </li>
+    </ol >
+
+    <!-- Define the text to place over the image -->
+    <div class="carousel-inner">
+      <div class="item active" >
+      <div class ="slide1"></div>
+      <div class="carousel-caption">
+        <h1>Amazing Backgrounds</h1>
+        <p>Thousands of Backgrounds for Free</p>
+        <p><a href="#" class="btn btn-primary btn-sm">Get them Now</a></p>
+      </div>
+    </div>
+    <div class="item">
+    <div class="slide2"></div>
+    <div class="carousel-caption">
+      <h1>Thousands of Colors</h1>
+      <p>Every Color you can Imagine</p>
+    </div>
+    </div>
+    <div class="item">
+    <div class="slide3"></div>
+    <div class="carousel-caption">
+    <h1>Amazing Illustrations</h1>
+    <p>And they are All Free</p>
+    </div>
+    </div>
+    </div>
+
+    <!-- Set the actions to take when the arrows are clicked -->
+    <a class="left carousel-control" href="#theCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"> </span>
+    </a>
+    <a class="right carousel-control" href="#theCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+    </div>
+
+
+
 
 <!-- bottstrap CONTAINERS -->
 <!-- container puts padding around itself while container-fluid fills the whole screen. Bootstap grids require a container. -->
 <div class="container">
 
-  <!-- page-header adds space aroundtext and enlarges it. It also adds an underline at the end -->
+<!-- page-header adds space aroundtext and enlarges it. It also adds an underline at the end -->
 <div class="page-header">
-  <h1>Wow! website</h1>
-</div>
+  <div class="tab-content">
 
-<!-- jumbotron enlarges fonts and puts everything in a gray box with rounded corners. If jumbotron is outside a container it fills the total width. You can change the styles by placing the changes after the Bootstrap CDN link -->
-<div class="jumbotron">
+    <div id="superman" class="tab-pane fade in active">
+      <h1>Superman is a fictional superhero appearing in American comic books published by DC Comics. </h1>
+    </div>
 
-  <!-- Adds a controller that the Angular module will control.
-      The view is the div element and all that it contains. The $scope component is used to provide data to the view. -->
-  <div ng-controller="app_ctrl_1">
+    <div id="batman" class="tab-pane fade">
+      <h1>Batman is a fictional superhero appearing in American comic books published by DC Comics. </1>
+    </div>
 
-    <!-- Define 2 elements that will be bound to the name and message values in the scope using the ng-model directive. If
-      either value changes here it will change in the scope and vice versa -->
-    Name: <input type="text" ng-model="name" /> {{name}} <br>
-    Message: <input type="text" ng-model="message" /> {{message}}
-
-    <!-- Bind a click on this button to the function updateValue using ng-click -->
-    <!-- BUTTONS bootstarp-->
-    <!-- There are many built in button colors and sizes. If a link is to trigger in page functionality it should use role="button". The button element should be used in most situations -->
-      <button ng-click="updateValue()" class="btn btn-info" role="button">Save</button>
+    <div id="flash" class="tab-pane fade">
+      <h1>The Flash is a fictional superhero appearing in American comic books published by DC Comics. </h1>
+    </div>
+    <div id="kidflash" class="tab-pane fade">
+      <h1>Kid Flash is a fictional superhero appearing in American comic books published by DC Comics. </h1>
+    </div>
 
   </div>
-
-</div>
-
 </div>
 
 
-  <!-- Load the AngularJS library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+
+
+
+<!-- jumbotron enlarges fonts and puts everything in a gray box with rounded corners.
+If jumbotron is outside a container it fills the total width. You can change the styles by placing
+the changes after the Bootstrap CDN link -->
+<div class="jumbotron">
+
+<div class="row">
+
+<div ng-controller="app_ctrl_1">
+
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <!--input text filed column-->
+
+          <!-- Define 2 elements that will be bound to the name and message values in the scope using the ng-model directive. If
+            either value changes here it will change in the scope and vice versa -->
+
+    <!-- Adds a controller that the Angular module will control.
+    The view is the div element and all that it contains. The $scope component is used to provide data to the view. -->
+
+
+          <!-- INPUT GROUPS -->
+
+                  <!-- We can add text or buttons on the right and/or left of input elements. Use input-group-lg or input-group-sm for input sizing -->
+                  <div class="input-group input-group-lg">
+                  <span class="input-group-addon">Your name</span>
+                  <input type="text" ng-model="name" class="form-control" placeholder="Full Name">
+                  </div><br>
+
+                  <div class="input-group input-group-lg">
+                  <span class="input-group-addon">Your Message</span>
+                  <input type="text" ng-model="message" class="form-control" placeholder="Full Name">
+                  </div><br>
+
+
+
+                  <!-- Create input button dropdowns. aria-haspopup states that input has a sub menu. aria-expanded closes the dropdown by default -->
+
+                    <div class="input-group">
+                      <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">User ID <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Facebook</a></li>
+                          <li><a href="#">Twitter</a></li>
+                          <li><a href="#">Google+</a></li>
+                        </ul>
+                      </div>
+                      <input type="text" class="form-control" aria-label="...">
+                    </div> <br>
+
+
+                  <!-- Input radio and checkboxes -->
+
+                    <div class="input-group">
+                      <span class="input-group-addon">
+
+                        <!-- Change to radio for radio -->
+                        <input type="checkbox">
+                      </span>
+                      <input type="text" class="form-control">
+                    </div><br>
+
+
+
+          <!-- Bind a click on this button to the function updateValue using ng-click -->
+          <!-- BUTTONS bootstarp-->
+          <!-- There are many built in button colors and sizes. If a link is to trigger in page functionality it should use role="button". The button element should be used in most situations -->
+            <button ng-click="updateValue()" class="btn btn-info" role="button">Save</button>
+
+
+            <!-- Media object -->
+
+            <div class="media">
+
+              <!-- You can use media-top, media-middle, or media-bottom -->
+              <div class="media-left media-top">
+                <a href="#">
+                  <img class="media-object" src="home-server-icon-32.png" alt="...">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Server</h4>
+                <p>In computing, a server is a computer program or a device that provides functionality for other programs or devices, called
+                  "clients".This architecture is called the client–server model, and a single overall computation is distributed across multiple
+                  processes or devices.</p>
+              </div>
+            </div>
+
+            <div class="media">
+              <div class="media-left media-top">
+                <a href="#">
+                  <img class="media-object" src="camera.png" alt="...">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">DSLR Camera</h4>
+                <p>A digital single-lens reflex camera (also called a digital SLR or DSLR) is a digital camera that combines the
+                  optics and the mechanisms of a single-lens reflex camera with a digital imaging sensor, as opposed to
+                  photographic film.</p>
+              </div>
+            </div>
+
+
+
+
+
+        </div>
+        <!--input text filed and media object column-->
+
+
+        <div class="col-lg-2 col-md-2 col-sm-2">
+          <!-- user input show column -->
+
+          <!-- <h4><a href="#userinputContent" data-toggle="collapse">User Input</a></h4> -->
+            <!-- user input link collaps/uncollaps -->
+
+                    <!-- ICONS -->
+                    <!-- Bootstrap has hundreds of free icons. http://getbootstrap.com/components/#glyphicons They can be used on their own or inside of buttons with a link or regular button for example. -->
+
+                    <!-- <span class="glyphicon glyphicon-film"></span> -->
+
+                    <a href="#userinputContent" data-toggle="collapse" class="btn btn-primary btn-lg">User Input<span class="glyphicon glyphicon-user"></span></a>
+
+                    <!-- <button type="button" class="btn btn-default btn-lg"> -->
+
+                    <!-- aria-hidden hides decorative icons from screen readers -->
+                    <!-- <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Call Me
+                    </button> -->
+
+
+
+          <div id="userinputContent" class="collapse in">
+            <!-- user input show div collaps/uncollaps -->
+
+            Name: {{name}} <br>
+            Message: {{message}}
+
+          </div>
+
+        </div>
+        <!-- user input show column -->
+
+      </div>
+      <!-- ng-controller="app_ctrl_1" -->
+
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+
+                      <!-- DROP DOWN MENUS -->
+                      <!-- You can easily add a drop down menu with class dropdown, or dropup. Change button size with btn-lg, btn-sm, btn-xs
+                      ARIA stands for Accessible Rich Internet Applications and it is used to make apps more excessible for people with disabilities. aria-haspopup states that the element has a sub menu. aria-expanded defines if the sub-menu is expanded. Full list here http://www.w3.org/TR/wai-aria/states_and_properties#aria-expanded -->
+                      <div class="dropdown">
+                      <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Favorite Hero
+
+                      <!-- Display icon in button -->
+                      <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+
+                      <!-- Unselectable header -->
+                      <li class="dropdown-header">Marvel</li>
+                      <li><a href="#">Spiderman</a></li>
+                      <li><a href="#">Captain America</a></li>
+                      <li><a href="#">Iron Man</a></li>
+
+                      <!-- Seperates content in menu -->
+                      <li role="separator" class="divider"></li>
+                      <li class="dropdown-header">DC</li>
+
+                      <!-- Disable menu element -->
+                      <li class="disabled"><a href="#">Superman</a></li>
+                      <li><a href="#">Batman</a></li>
+                      <li><a href="#">Flash</a></li>
+                      </ul>
+                      </div>
+
+
+                    <!-- Thumbnails -->
+                          <div class="thumbnail">
+                          <img src="Jupiter.png" alt="...">
+                          <div class="caption">
+                            <h4>Jupiter</h4>
+                            <p>
+                              Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a giant planet with
+                              a mass one-thousandth that of the Sun, but two and a half times that of all the other planets in the Solar System combined.
+                            </p>
+                              <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
+                          </div>
+                          </div>
+
+
+
+      </div>
+
+
+
+
+
+</div>
+<!-- row -->
+
+</div>
+<!-- jumbotron -->
+
+</div>
+<!--container div  -->
+
+
+
+<!-- Load the AngularJS library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
 
     <!-- Load the JS Module -->
         <script src="app_module.js"></script>
